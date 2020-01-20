@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+  <link rel="stylesheet" type="text/css" href="mobile.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raised App</title>
+<script>
+
+function pay8()
+{
+
+let sessionKey = null;
+let transactionLink= null;
+
+
+fetch('https://api.raisedforyou.com/api/v1/sessions/3B7AEB/donations',{
+method: 'POST',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify({
+  amount: 971,
+    currency: "EUR",
+    description: "donation"
+})
+}).then(res => {return res.json()
+})
+
+.then( data => {transactionLink = data.transaction_link; console.log(data);
+   window.location = transactionLink; })
+
+}
+
+function payCustom()
+{
+  if(document.getElementById("donation").value <10)
+  {
+    
+    
+  }
+let amountBtn = (+document.getElementById("donation").value * 100)-29;
+let transactionLink= null;
+
+
+
+fetch('https://api.raisedforyou.com/api/v1/sessions/3B7AEB/donations',{
+method: 'POST',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify({
+  amount: amountBtn,
+    currency: "EUR",
+    description: "donation"
+})
+}).then(res => {return res.json()
+})
+
+.then( data => {transactionLink = data.transaction_link; console.log(data);
+if(document.getElementById("donation").value <10){
+  alert("Please enter minimum €10!");
+  
+}
+else{
+  window.location = transactionLink; 
+}
+   
+
+  })}
+
+function pay15()
+{
+
+let sessionKey = null;
+let transactionLink= null;
+
+
+fetch('https://api.raisedforyou.com/api/v1/sessions/3B7AEB/donations',{
+method: 'POST',
+headers: {
+'Content-Type': 'application/json'
+},
+body: JSON.stringify({
+  amount: 1971,
+    currency: "EUR",
+    description: "donation"
+})
+}).then(res => {return res.json()
+})
+
+.then( data => {transactionLink = data.transaction_link; console.log(data);
+   window.location = transactionLink; })
+
+}
+</script>
+
+
+</head>
+
+<body>
+
+<img src="bg.png">
+
+
+
+<br>
+<br>
+  <br><br><br>
+  <div class="contText">HOW MUCH WOULD YOU LIKE TO CONTRIBUTE?</div>
+
+
+  <div class="btn-all">
+    <button class="btn-group" onclick="pay8()">€10</button>
+    <button class="btn-group" onclick="pay15()">€20</button>
+    
+    <button class="btn-group1"  onclick="payCustom()">Pay</button>
+    <input type="number" id="donation" min="10" max="1000" background-color="goldenrod"
+    name="quantity" placeholder="Custom €">
+  
+    <span><p>Min Amount: €10</p></span>
+  </div>
+
+
+
+
+</body>
+
+</html>

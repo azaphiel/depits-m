@@ -1,0 +1,125 @@
+body {
+  background-color: black;
+}
+
+#fx {
+  z-index: -2;
+
+  position: absolute;
+  width: 95%;
+  height: 110%;
+}
+
+
+.contText1 {
+  color: rgba(225, 225, 225, .1);
+  background: url(color3.jpg);
+  animation: animateMidE 15s linear infinite;
+  -webkit-background-clip: text;
+  font-family: arial;
+  font-size: 13vw;
+  font-weight: 600;
+  text-align: left;
+  margin: auto;
+  width: 90%;
+}
+
+@keyframes animateMidE {
+  0% {
+    background-position: left 1000px top 1000px;
+  }
+}
+
+.conText {
+  color: goldenrod;
+  font-weight: 600;
+  font-family: helvetica;
+  width: 70%;
+  font-size: 10vw;
+  text-align: left;
+  margin: auto;
+}
+.formDet{
+  display: block;
+  margin-left: 17%;
+
+
+}
+#fname{
+  height: 40px;
+  width: 200px;
+  margin-top: 20px;
+  font-size: 15px;
+
+}
+
+.btn-all {
+  margin-top: px;
+  width: 100%;
+}
+
+.btn-group {
+  margin-top: 25px;
+  font-family: helvetica;
+  width: 70%;
+  height: 60px;
+  border-radius: 20px;
+  background-color: goldenrod;
+  border: none;
+  color: white;
+  text-align: center;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 15px 32px;
+  font-size: 25px;
+  display: block;
+  text-align: center;
+  margin-left: 60px;
+}
+.btn-group1 {
+  margin-top: 25px;
+  font-family: helvetica;
+  width: 52%;
+  height: 60px;
+  border-radius: 20px;
+  background-color: goldenrod;
+  border: none;
+  color: white;
+  text-align: center;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 15px 32px;
+  font-size: 20px;
+  display: block;
+  margin-left: 60px;
+}
+#donation{
+  width: 14%;
+  height: 52px;
+  border-radius: 20px;
+  background: goldenrod;
+  margin-left: 68%;
+  margin-top: -60px;
+  font-size: 20px;
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+.btn-group:hover {
+  color: white;
+  background-color: #b9424e;
+}
+
+
+#heart{
+  width: 70%;
+  align-items: center;
+  height: 35%;
+  margin-left: 50px;
+}
