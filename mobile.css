@@ -139,3 +139,11 @@ span p{
   padding-left: 70px;
   color: black;
 }
+.depits {
+  width: 30%;
+  height: auto;
+ margin-left: 32%;
+ margin-top: 150%;
+  position: absolute;
+
+}
